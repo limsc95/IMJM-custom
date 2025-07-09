@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: ENC(VQmqYCRU1xNpXPOGcFvJr0DrOdNSdhU2+/lINu/KLABIMskkhaNd8i9OAzTaYsvH7ayAdA1Y/esgyzGu8P++qjuvOXo3i6PJZ+TATE7N569SBnWnqobrnlg083TYr7kmWzFjbrEv0pKzIfGaQ/P9fy1Kx3sjEHWn)
+    username: ENC(gDZE9xFux3ydtmDV9x6F9Q==)
+    password: ENC(qANakfdSDvAT7PxI8RUwQJfICd3rXNlw)
+    driver-class-name: org.postgresql.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-name: google
+            client-id: ENC(09sVzBogF2PpwmAPCWIKTopMC3Vw6SGtka+6t7ugKtLVmJlLpcNuBLmidZLuvxRp2UocWP+RED2DWIA9Y3N9JPofEtexkPW69+iDPrrvr52mpDciXZHWag==)
+            client-secret: ENC(Rb5OWS1AgM1LfbvZqKSWYOLhCJ5xqh+wP1e/DuY1+uQMl1WDCO2lN32kXnW1AWsO)
+            redirect-uri: ${app.server.domain}/login/oauth2/code/google
+            authorization-grant-type: authorization_code
+            scope: profile,email
+
+app:
+  client:
+    domain: https://www.imjm-hair.com
+  admin:
+    domain: https://www.imjm-hair-partner.com
+  server:
+    domain: https://api.imjm-hair.com
+  
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: INFO
+        type:
+          descriptor:
+            sql:
+              BasicBinder: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+      base-path: /management

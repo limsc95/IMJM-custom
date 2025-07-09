@@ -1,0 +1,733 @@
+.salon-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    background-color: #fff;
+    position: relative;
+}
+
+.loading-container, .error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-size: 18px;
+    color: #888;
+}
+
+.salon-gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gallery-nav.prev {
+    left: 10px;
+}
+
+.gallery-nav.next {
+    right: 10px;
+}
+
+.salon-header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.salon-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.salon-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.salon-rating svg {
+    margin-right: 4px;
+}
+
+/* 수정된 예약 버튼 스타일 */
+.reservation-buttons {
+    display: flex;
+    padding: 16px;
+    gap: 10px;
+}
+
+.reservation-btn {
+    flex: 1;
+    padding: 12px 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.reservation-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.reservation-btn .btn-icon {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #555;
+}
+
+.reservation-btn {
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.reservation-btn .btn-icon {
+    color: #555;
+}
+
+.reservation-btn:hover {
+    background-color: #FDC7BF;
+}
+
+.reservation-btn span {
+    white-space: nowrap;
+}
+
+.info-section {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info-header svg {
+    margin-right: 10px;
+}
+
+.info-header h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.business-hours-detail {
+    margin-top: 10px;
+    padding-left: 34px;
+}
+
+.hour-row {
+    display: flex;
+    margin: 4px 0;
+}
+
+.day {
+    width: 200px;
+    font-weight: 500;
+}
+
+.time {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.store-info {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.store-info p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+.holiday {
+    margin-left: 20px;
+    color: #e53935;
+    font-weight: 500;
+}
+
+/* 지도 모달 스타일 */
+.map-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.map-modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.map-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.map-container {
+    height: 300px;
+    width: 100%;
+}
+
+.map-address {
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.map-address p {
+    margin: 0;
+    color: #666;
+}
+
+/* 전화번호 모달 스타일 추가 */
+.phone-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.phone-modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.phone-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.phone-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.phone-icon {
+    margin-right: 10px;
+    color: #f5989d;
+}
+
+.phone-actions {
+    padding: 0 15px 20px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.call-button {
+    background-color: #f5989d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.call-button:hover {
+    background-color: #e77a80;
+}
+
+/* 스타일리스트 섹션 CSS */
+.stylists-section {
+    margin-bottom: 20px;
+}
+
+.stylists-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stylists-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.view-all-link {
+    display: flex;
+    align-items: center;
+    color: #f5989d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.stylists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.stylist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.stylist-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+
+.stylist-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stylist-info {
+    flex: 1;
+}
+
+.stylist-name {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.stylist-position {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.no-stylists {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}
+
+/* 서비스 메뉴 스타일 */
+.service-menu-section {
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-menu-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.service-menu-list {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.service-menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.service-menu-item:last-child {
+    border-bottom: none;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-name {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.service-type {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.service-description {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.service-price {
+    min-width: 100px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.service-price p {
+    margin: 0;
+}
+
+.no-services {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}
+
+.service-type-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    padding-left: 10px;
+}
+
+.type-filter-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.type-filter-btn.active {
+    background-color: #f5989d;
+    color: white;
+    border-color: #f5989d;
+}
+
+.type-filter-btn:hover:not(.active) {
+    background-color: #eaeaea;
+}
+
+/* 리뷰 섹션 스타일 */
+.reviews-section {
+    margin-top: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reviews-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.reviews-list {
+    padding: 0;
+}
+
+.review-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-title {
+    display: flex;
+    align-items: center;
+}
+
+.stars-container {
+    display: flex;
+}
+
+.star-icon {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.review-user {
+    font-size: 14px;
+    color: #777;
+}
+
+.review-content {
+    margin-bottom: 12px;
+}
+
+.review-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.review-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.review-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.review-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.review-tag {
+    font-size: 12px;
+    background-color: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: #666;
+}
+
+.review-salon-reply {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.salon-reply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reply-time {
+    font-size: 12px;
+    color: #888;
+}
+
+.review-salon-reply p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.no-reviews {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}
+
+/* 상세 주소 스타일 */
+.detail-address-info {
+    margin-top: 10px;
+    padding-left: 34px;
+}
+
+.detail-address-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* 더 보기 버튼 스타일 */
+.load-more-container {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.load-more-button {
+    background-color: #FDC7BF;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-button:hover {
+    background-color: #eaeaea;
+}
+
+.loading-more {
+    text-align: center;
+    color: #888;
+    padding: 15px 0;
+    font-size: 14px;
+}
+.reservation-btn.calendar {
+    text-decoration: none;
+}
+/* 리뷰 답글 스타일 */
+.review-salon-reply {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff8f8;
+    border: 1px solid #ffcdd2;
+    border-radius: 8px;
+}
+
+.salon-reply-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.salon-reply-header strong {
+    color: #d32f2f;
+}
+
+.reply-date {
+    color: #757575;
+    font-size: 0.8rem;
+}
+
+.no-reply {
+    color: #757575;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.salon-reply-content {
+    margin-top: 5px;
+}

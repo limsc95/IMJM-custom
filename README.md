@@ -1,5 +1,8 @@
 ![Image](https://github.com/user-attachments/assets/323c3f6d-6812-455a-b40e-54045ddc38d8)
 
+## 원본 레포
+https://github.com/ncamp16-final-team1/IMJM
+
 ## 📌 프로젝트 소개
 이모저모는 언어와 문화의 장벽 없이, 한국은 물론 전 세계 어디에서든<br>
 쉽고 편리하게 미용 서비스를 이용할 수 있도록 돕는 글로벌 뷰티 플랫폼입니다.<br>
